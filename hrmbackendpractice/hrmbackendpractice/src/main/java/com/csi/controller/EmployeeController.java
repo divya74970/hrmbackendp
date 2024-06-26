@@ -38,6 +38,11 @@ public class EmployeeController {
         return ResponseEntity.ok(employeeService.findById(empId));
     }
 
+    @GetMapping("/findbyaddress/{empAddress}")
+    public ResponseEntity<Employee> findByAddress(@PathVariable String empAddress){
+        return ResponseEntity.ok(employeeService.findByAddress(empAddress));
+    }
+
     @GetMapping("/findbyname/{empName}")
     public ResponseEntity<Employee> findByName(@PathVariable String empName) {
         return ResponseEntity.ok(employeeService.findByEmpName(empName));
