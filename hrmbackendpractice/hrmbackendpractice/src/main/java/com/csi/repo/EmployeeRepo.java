@@ -17,4 +17,6 @@ public interface EmployeeRepo extends JpaRepository<Employee, Integer> {
     Employee findByEmpContactNumber(long empContactNumber);
 
     Employee findByEmpDOB(Date empDOB);
+
+    Employee findByAddress(String empAddress);
 }

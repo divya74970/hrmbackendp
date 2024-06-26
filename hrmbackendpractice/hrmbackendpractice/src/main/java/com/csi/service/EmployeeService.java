@@ -69,4 +69,7 @@ public class EmployeeService {
         employeeRepo.deleteAll();
     }
 
+    public Employee findByAddress(String empAddress) {
+        return employeeRepo.findByAddress(empAddress);
+    }
 }
